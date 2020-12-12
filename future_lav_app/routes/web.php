@@ -17,3 +17,6 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::post('/submit', function () {
+    return Request::all();
+})->name('comment-form');

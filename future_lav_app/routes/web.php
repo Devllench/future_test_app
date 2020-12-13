@@ -12,11 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\CommentController;
 
 Route::get('/', function () {
     return view('index');
 });
 
-Route::post('/submit', function () {
-    return Request::all();
-})->name('comment-form');
+Route::post('/submit', [CommentController::class,'submit_fun'])->name('comment-form');

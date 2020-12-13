@@ -1,23 +1,24 @@
 body{
     background: #f9f9f9;
     height: 100%;
-    padding: 0;
-    margin: 0;
 }
 header{
-    font-size: 8pt;
+    font-size: 10pt;
     font-family: sans-serif;
 }
 article{
     background-color: #eeeeee;
 }
-.comment-head{
-    font-size: 20pt;
-}
 .comment{
     background-color: #eeeeee;
+    /*font-size: 15pt;
+    font-family: sans-serif;*/
+}
+.comment-head{
+    font-size: 25pt;
+    font-family: sans-serif;
 }
 footer{
-    font-size: 8pt;
+    font-size: 10pt;
     font-family: sans-serif;
 }

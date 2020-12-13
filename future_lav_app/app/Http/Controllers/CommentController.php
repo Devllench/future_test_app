@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Comment;
+
 
 class CommentController extends Controller
 {
     public function submit_fun(Request $req){
-        $validation = $req->validate([
-            'comment'=>'required|min:5|max:50',
-            'name'=>'required|min:1|max:20'
+        $contact = New Comment();
+        $contact -> name = $req->input('name');
+        $contact -> comment = $req->input('comment');
 
-        ]);
+        $contact->save();
 
-
+        return redirect('/');
 }
 }

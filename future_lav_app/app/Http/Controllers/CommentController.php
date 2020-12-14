@@ -10,12 +10,15 @@ class CommentController extends Controller
 {
     public function submit_fun(CommentReqest $req){
 
-        $comment = New Comment();
-        $comment -> name = $req->input('name');
-        $comment -> comment = $req->input('comment');
-
-
-        $comment->save();
+        $comments = New Comment();
+        $comments -> name = $req->input('name');
+        $comments -> comment = $req->input('comment');
+        $comments -> save();
         return redirect('/');
-}
+    }
+    public function allDate(){
+
+        //dd(Comment::all());
+        return view('index',['date' => Comment::all()]);
+    }
 }

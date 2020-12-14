@@ -17,5 +17,6 @@ use App\Http\Controllers\CommentController;
 Route::get('/', function () {
     return view('index');
 });
-
 Route::post('/submit', [CommentController::class,'submit_fun'])->name('comment-form');
+Route::get('/', [CommentController::class,'allDate'])->name('comment-date');
+

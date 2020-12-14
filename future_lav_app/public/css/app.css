@@ -1,6 +1,6 @@
 body{
     background: #f9f9f9;
-    height: 100%;
+    *height: 100%;
 }
 header{
     font-size: 8pt;
@@ -10,13 +10,8 @@ article{
     background-color: #eeeeee;
 
 }
-.raw{
-    border: 1px solid #e1e1e1; /* Белая рамка */
-    border-radius: 1px; /* Радиус скругления */
-    width: 100px;
-    height: 100px;
 
-}
+
 .comment{
     background-color: #eeeeee;
     font-size: 10pt;

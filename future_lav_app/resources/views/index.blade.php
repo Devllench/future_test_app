@@ -1,19 +1,24 @@
 @extends('layouts.main')
 
 @section('header')
-    <header xmlns="http://www.w3.org/1999/html">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-10">
-                        <strong>
-                            <p>Телефон: (499)340-94-71</p>
-                            <p>Email: info@future-group.ru</p>
-                        </strong>
-                    </div>
-                    <div class="col-sm-2"><img src="{{asset('img/future_test.png')}}" alt="LOGO"></div>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-10">
+                    <strong>
+                        <p>Телефон: (499)340-94-71</p>
+                        <p>Email: info@future-group.ru</p>
+                    </strong>
                 </div>
-                    <div class="col-sm-6"><strong class="comment-head"><strong>Комментарии</strong> </div>
+                <div class="col-sm-2"><img src="{{asset('img/future_test.png')}}" alt="LOGO"></div>
             </div>
+
+            <div class="row">
+                <div class="col-sm-10">
+                    <strong class="comment-head">Комментарии</strong>
+                </div>
+            </div>
+        </div>
     </header>
 @endsection
 
@@ -27,10 +32,21 @@
                 <div class="row">
 
                     <div class="col-sm-12">
-
-                        <small>USENAME DATE</small></br>
-                        <small>COMMENT</small>
-
+                        @foreach($date as $el)
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-xs-2">
+                                            <p><strong>{{$el -> name}}</strong></p>
+                                        </div>
+                                        <div class="col-xs-10">
+                                            <p>{{$el -> created_at -> format('H:i')}}<tab></tab>{{ $el -> created_at ->format(' d.m.Y')}}</p>
+                                        </div>
+                                    </div>
+                                    <small><p>{{$el -> comment}}</p></small>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
                 <br><br>

@@ -3,20 +3,27 @@ body{
     height: 100%;
 }
 header{
-    font-size: 10pt;
+    font-size: 8pt;
     font-family: sans-serif;
 }
 article{
     background-color: #eeeeee;
+
+}
+.raw{
+    border: 1px solid #e1e1e1; /* Белая рамка */
+    border-radius: 1px; /* Радиус скругления */
+    width: 100px;
+    height: 100px;
+
 }
 .comment{
     background-color: #eeeeee;
-    /*font-size: 15pt;
-    font-family: sans-serif;*/
+    font-size: 10pt;
 }
 .comment-head{
-    font-size: 25pt;
-    font-family: sans-serif;
+    font-size: 50pt;
+
 }
 footer{
     font-size: 10pt;

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('header')
-    <header>
+    <header xmlns="http://www.w3.org/1999/html">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-10">
@@ -12,22 +12,35 @@
                     </div>
                     <div class="col-sm-2"><img src="{{asset('img/future_test.png')}}" alt="LOGO"></div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-10"><strong class="comment-head">Комментарии</strong> </div>
-                </div>
+                    <div class="col-sm-6"><strong class="comment-head"><strong>Комментарии</strong> </div>
             </div>
     </header>
 @endsection
 
 @section('article')
-    <article>
+    <article class="comment">
+
         <div class="container-fluid">
-            <form action="{{route('comment-form')}}" method="post">
+
+
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+                        <small>USENAME DATE</small></br>
+                        <small>COMMENT</small>
+
+                    </div>
+                </div>
+                <br><br>
+                <form class="comm_pls" action="{{route('comment-form')}}" method="post">
+                <strong class="comm_pls">Оставить коментарий</strong>
                 @csrf
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="name">Ваше имя</label>
+                    <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
                             <input type="text" name="name" id="name" class="form-control">
                         </div>
                         <div class="form-group">
@@ -37,9 +50,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-4"></div>
-                    <div class="col-sm-8">
-                        <button type="submit" class="btm btm-success">Отправить</button>
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-7">
+                        <button type="submit" class="btn btn-light">Отправить</button>
                     </div>
                 </div>
             </form>

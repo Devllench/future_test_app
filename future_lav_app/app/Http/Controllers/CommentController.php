@@ -4,17 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comment;
-
+use App\Http\Requests\CommentReqest;
 
 class CommentController extends Controller
 {
-    public function submit_fun(Request $req){
-        $contact = New Comment();
-        $contact -> name = $req->input('name');
-        $contact -> comment = $req->input('comment');
+    public function submit_fun(CommentReqest $req){
 
-        $contact->save();
+        $comment = New Comment();
+        $comment -> name = $req->input('name');
+        $comment -> comment = $req->input('comment');
 
+
+        $comment->save();
         return redirect('/');
 }
 }

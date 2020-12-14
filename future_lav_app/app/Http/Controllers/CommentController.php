@@ -18,7 +18,7 @@ class CommentController extends Controller
     }
     public function allDate(){
 
-        //dd(Comment::all());
-        return view('index',['date' => Comment::all()]);
+        //$commet_db=Comment::all());
+        return view('index',['date' => Comment::all()->take(-3)]);
     }
 }

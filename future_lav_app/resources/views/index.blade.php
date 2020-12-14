@@ -15,7 +15,7 @@
 
             <div class="row">
                 <div class="col-sm-10">
-                    <strong class="comment-head">Комментарии</strong>
+                    <h4 class="comment-head">Комментарии</h4>
                 </div>
             </div>
         </div>
@@ -30,17 +30,17 @@
 
             <div class="container-fluid">
                 <div class="row">
-
+                <br><br>
                     <div class="col-sm-12">
                         @foreach($date as $el)
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-xs-2">
+                                        <div class="col-xs-1">
                                             <p><strong>{{$el -> name}}</strong></p>
                                         </div>
                                         <div class="col-xs-10">
-                                            <p>{{$el -> created_at -> format('H:i')}}<tab></tab>{{ $el -> created_at ->format(' d.m.Y')}}</p>
+                                            <p>{{$el -> created_at -> format('H:i')}}{{ $el -> created_at ->format(' d.m.Y')}}</p>
                                         </div>
                                     </div>
                                     <small><p>{{$el -> comment}}</p></small>
@@ -51,10 +51,10 @@
                 </div>
                 <br><br>
                 <form class="comm_pls" action="{{route('comment-form')}}" method="post">
-                <strong class="comm_pls">Оставить коментарий</strong>
+                    <h1 class="coment_h1">Оставить коментарий</h1>
                 @csrf
                     <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="name">Ваше имя</label>
                             <input type="text" name="name" id="name" class="form-control">
@@ -66,8 +66,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-5"></div>
-                    <div class="col-sm-7">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-7">
                         <button type="submit" class="btn btn-light">Отправить</button>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ body{
     height: 100%;
 }
 header{
-    font-size: 15pt;
+    font-size: 10pt;
     font-family: sans-serif;
 }
 article{
@@ -15,6 +15,6 @@ article{
     font-family: sans-serif;*/
 }
 footer{
-    font-size: 15pt;
+    font-size: 10pt;
     font-family: sans-serif;
 }

@@ -2,9 +2,6 @@
 -- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Dec 15, 2020 at 01:51 AM
--- Server version: 5.7.21-20-beget-5.7.21-20-1-log
 -- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -19,7 +16,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `lenya2xn_fut_lav`
+-- Database: `database`
 --
 
 -- --------------------------------------------------------
